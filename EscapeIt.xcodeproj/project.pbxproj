@@ -10,11 +10,31 @@
 		04B51C3C1B0CDAAC0050BD2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51C3B1B0CDAAC0050BD2C /* main.m */; };
 		04B51C3F1B0CDAAC0050BD2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51C3E1B0CDAAC0050BD2C /* AppDelegate.m */; };
 		04B51C421B0CDAAC0050BD2C /* EscapeIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04B51C401B0CDAAC0050BD2C /* EscapeIt.xcdatamodeld */; };
-		04B51C451B0CDAAC0050BD2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51C441B0CDAAC0050BD2C /* ViewController.m */; };
-		04B51C481B0CDAAC0050BD2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B51C461B0CDAAC0050BD2C /* Main.storyboard */; };
+		04B51C451B0CDAAC0050BD2C /* SJIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51C441B0CDAAC0050BD2C /* SJIndexViewController.m */; };
 		04B51C4A1B0CDAAC0050BD2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B51C491B0CDAAC0050BD2C /* Images.xcassets */; };
 		04B51C4D1B0CDAAC0050BD2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B51C4B1B0CDAAC0050BD2C /* LaunchScreen.xib */; };
 		04B51C591B0CDAAC0050BD2C /* EscapeItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51C581B0CDAAC0050BD2C /* EscapeItTests.m */; };
+		04B51CFB1B0CDDAA0050BD2C /* NSArray+SJArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CD71B0CDDAA0050BD2C /* NSArray+SJArray.m */; };
+		04B51CFC1B0CDDAA0050BD2C /* NSDictionary+SJDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CD91B0CDDAA0050BD2C /* NSDictionary+SJDictionary.m */; };
+		04B51CFD1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CDB1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.m */; };
+		04B51CFE1B0CDDAA0050BD2C /* NSString+SJString.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CDD1B0CDDAA0050BD2C /* NSString+SJString.m */; };
+		04B51CFF1B0CDDAA0050BD2C /* SJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CDF1B0CDDAA0050BD2C /* SJBaseViewController.m */; };
+		04B51D001B0CDDAA0050BD2C /* SJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CE11B0CDDAA0050BD2C /* SJCell.m */; };
+		04B51D011B0CDDAA0050BD2C /* SJFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CE41B0CDDAA0050BD2C /* SJFunction.m */; };
+		04B51D021B0CDDAA0050BD2C /* SJImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CE61B0CDDAA0050BD2C /* SJImageLabel.m */; };
+		04B51D031B0CDDAA0050BD2C /* SJRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CE81B0CDDAA0050BD2C /* SJRegex.m */; };
+		04B51D041B0CDDAA0050BD2C /* SJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CEA1B0CDDAA0050BD2C /* SJTextField.m */; };
+		04B51D051B0CDDAA0050BD2C /* UIButton+SJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CEC1B0CDDAA0050BD2C /* UIButton+SJButton.m */; };
+		04B51D061B0CDDAA0050BD2C /* UIColor+SJColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CEE1B0CDDAA0050BD2C /* UIColor+SJColor.m */; };
+		04B51D071B0CDDAA0050BD2C /* UILabel+SJLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CF01B0CDDAA0050BD2C /* UILabel+SJLabel.m */; };
+		04B51D081B0CDDAA0050BD2C /* UITableView+SJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CF21B0CDDAA0050BD2C /* UITableView+SJTableView.m */; };
+		04B51D091B0CDDAA0050BD2C /* UITextField+SJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CF41B0CDDAA0050BD2C /* UITextField+SJTextField.m */; };
+		04B51D0A1B0CDDAA0050BD2C /* UITextView+SJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CF61B0CDDAA0050BD2C /* UITextView+SJTextView.m */; };
+		04B51D0B1B0CDDAA0050BD2C /* UIView+SJView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CF81B0CDDAA0050BD2C /* UIView+SJView.m */; };
+		04B51D0C1B0CDDAA0050BD2C /* UIViewController+SJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51CFA1B0CDDAA0050BD2C /* UIViewController+SJViewController.m */; };
+		04B51D101B0CDF660050BD2C /* SJIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51D0F1B0CDF660050BD2C /* SJIndexView.m */; };
+		04B51D131B0CE1990050BD2C /* SJGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51D121B0CE1990050BD2C /* SJGameViewController.m */; };
+		04B51D161B0CE1AC0050BD2C /* SJGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B51D151B0CE1AC0050BD2C /* SJGameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +54,58 @@
 		04B51C3D1B0CDAAC0050BD2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04B51C3E1B0CDAAC0050BD2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04B51C411B0CDAAC0050BD2C /* EscapeIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EscapeIt.xcdatamodel; sourceTree = "<group>"; };
-		04B51C431B0CDAAC0050BD2C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04B51C441B0CDAAC0050BD2C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04B51C471B0CDAAC0050BD2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04B51C431B0CDAAC0050BD2C /* SJIndexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJIndexViewController.h; sourceTree = "<group>"; };
+		04B51C441B0CDAAC0050BD2C /* SJIndexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJIndexViewController.m; sourceTree = "<group>"; };
 		04B51C491B0CDAAC0050BD2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04B51C4C1B0CDAAC0050BD2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		04B51C521B0CDAAC0050BD2C /* EscapeItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EscapeItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B51C571B0CDAAC0050BD2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B51C581B0CDAAC0050BD2C /* EscapeItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EscapeItTests.m; sourceTree = "<group>"; };
+		04B51CD51B0CDDAA0050BD2C /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		04B51CD61B0CDDAA0050BD2C /* NSArray+SJArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SJArray.h"; sourceTree = "<group>"; };
+		04B51CD71B0CDDAA0050BD2C /* NSArray+SJArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SJArray.m"; sourceTree = "<group>"; };
+		04B51CD81B0CDDAA0050BD2C /* NSDictionary+SJDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SJDictionary.h"; sourceTree = "<group>"; };
+		04B51CD91B0CDDAA0050BD2C /* NSDictionary+SJDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SJDictionary.m"; sourceTree = "<group>"; };
+		04B51CDA1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+SJFileManager.h"; sourceTree = "<group>"; };
+		04B51CDB1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+SJFileManager.m"; sourceTree = "<group>"; };
+		04B51CDC1B0CDDAA0050BD2C /* NSString+SJString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SJString.h"; sourceTree = "<group>"; };
+		04B51CDD1B0CDDAA0050BD2C /* NSString+SJString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SJString.m"; sourceTree = "<group>"; };
+		04B51CDE1B0CDDAA0050BD2C /* SJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBaseViewController.h; sourceTree = "<group>"; };
+		04B51CDF1B0CDDAA0050BD2C /* SJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBaseViewController.m; sourceTree = "<group>"; };
+		04B51CE01B0CDDAA0050BD2C /* SJCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCell.h; sourceTree = "<group>"; };
+		04B51CE11B0CDDAA0050BD2C /* SJCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCell.m; sourceTree = "<group>"; };
+		04B51CE21B0CDDAA0050BD2C /* SJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFrame.h; sourceTree = "<group>"; };
+		04B51CE31B0CDDAA0050BD2C /* SJFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJFunction.h; sourceTree = "<group>"; };
+		04B51CE41B0CDDAA0050BD2C /* SJFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJFunction.m; sourceTree = "<group>"; };
+		04B51CE51B0CDDAA0050BD2C /* SJImageLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJImageLabel.h; sourceTree = "<group>"; };
+		04B51CE61B0CDDAA0050BD2C /* SJImageLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJImageLabel.m; sourceTree = "<group>"; };
+		04B51CE71B0CDDAA0050BD2C /* SJRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJRegex.h; sourceTree = "<group>"; };
+		04B51CE81B0CDDAA0050BD2C /* SJRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJRegex.m; sourceTree = "<group>"; };
+		04B51CE91B0CDDAA0050BD2C /* SJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTextField.h; sourceTree = "<group>"; };
+		04B51CEA1B0CDDAA0050BD2C /* SJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTextField.m; sourceTree = "<group>"; };
+		04B51CEB1B0CDDAA0050BD2C /* UIButton+SJButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SJButton.h"; sourceTree = "<group>"; };
+		04B51CEC1B0CDDAA0050BD2C /* UIButton+SJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SJButton.m"; sourceTree = "<group>"; };
+		04B51CED1B0CDDAA0050BD2C /* UIColor+SJColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SJColor.h"; sourceTree = "<group>"; };
+		04B51CEE1B0CDDAA0050BD2C /* UIColor+SJColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SJColor.m"; sourceTree = "<group>"; };
+		04B51CEF1B0CDDAA0050BD2C /* UILabel+SJLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SJLabel.h"; sourceTree = "<group>"; };
+		04B51CF01B0CDDAA0050BD2C /* UILabel+SJLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SJLabel.m"; sourceTree = "<group>"; };
+		04B51CF11B0CDDAA0050BD2C /* UITableView+SJTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SJTableView.h"; sourceTree = "<group>"; };
+		04B51CF21B0CDDAA0050BD2C /* UITableView+SJTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SJTableView.m"; sourceTree = "<group>"; };
+		04B51CF31B0CDDAA0050BD2C /* UITextField+SJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SJTextField.h"; sourceTree = "<group>"; };
+		04B51CF41B0CDDAA0050BD2C /* UITextField+SJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SJTextField.m"; sourceTree = "<group>"; };
+		04B51CF51B0CDDAA0050BD2C /* UITextView+SJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+SJTextView.h"; sourceTree = "<group>"; };
+		04B51CF61B0CDDAA0050BD2C /* UITextView+SJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SJTextView.m"; sourceTree = "<group>"; };
+		04B51CF71B0CDDAA0050BD2C /* UIView+SJView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SJView.h"; sourceTree = "<group>"; };
+		04B51CF81B0CDDAA0050BD2C /* UIView+SJView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SJView.m"; sourceTree = "<group>"; };
+		04B51CF91B0CDDAA0050BD2C /* UIViewController+SJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SJViewController.h"; sourceTree = "<group>"; };
+		04B51CFA1B0CDDAA0050BD2C /* UIViewController+SJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SJViewController.m"; sourceTree = "<group>"; };
+		04B51D0D1B0CDE140050BD2C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04B51D0E1B0CDF660050BD2C /* SJIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJIndexView.h; sourceTree = "<group>"; };
+		04B51D0F1B0CDF660050BD2C /* SJIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJIndexView.m; sourceTree = "<group>"; };
+		04B51D111B0CE1990050BD2C /* SJGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJGameViewController.h; sourceTree = "<group>"; };
+		04B51D121B0CE1990050BD2C /* SJGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJGameViewController.m; sourceTree = "<group>"; };
+		04B51D141B0CE1AC0050BD2C /* SJGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJGameView.h; sourceTree = "<group>"; };
+		04B51D151B0CE1AC0050BD2C /* SJGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJGameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +147,17 @@
 		04B51C381B0CDAAC0050BD2C /* EscapeIt */ = {
 			isa = PBXGroup;
 			children = (
+				04B51CD41B0CDDAA0050BD2C /* SJFrame */,
 				04B51C3D1B0CDAAC0050BD2C /* AppDelegate.h */,
 				04B51C3E1B0CDAAC0050BD2C /* AppDelegate.m */,
-				04B51C431B0CDAAC0050BD2C /* ViewController.h */,
-				04B51C441B0CDAAC0050BD2C /* ViewController.m */,
-				04B51C461B0CDAAC0050BD2C /* Main.storyboard */,
+				04B51C431B0CDAAC0050BD2C /* SJIndexViewController.h */,
+				04B51C441B0CDAAC0050BD2C /* SJIndexViewController.m */,
+				04B51D0E1B0CDF660050BD2C /* SJIndexView.h */,
+				04B51D0F1B0CDF660050BD2C /* SJIndexView.m */,
+				04B51D111B0CE1990050BD2C /* SJGameViewController.h */,
+				04B51D121B0CE1990050BD2C /* SJGameViewController.m */,
+				04B51D141B0CE1AC0050BD2C /* SJGameView.h */,
+				04B51D151B0CE1AC0050BD2C /* SJGameView.m */,
 				04B51C491B0CDAAC0050BD2C /* Images.xcassets */,
 				04B51C4B1B0CDAAC0050BD2C /* LaunchScreen.xib */,
 				04B51C401B0CDAAC0050BD2C /* EscapeIt.xcdatamodeld */,
@@ -100,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				04B51C3A1B0CDAAC0050BD2C /* Info.plist */,
+				04B51D0D1B0CDE140050BD2C /* PrefixHeader.pch */,
 				04B51C3B1B0CDAAC0050BD2C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -120,6 +191,51 @@
 				04B51C571B0CDAAC0050BD2C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04B51CD41B0CDDAA0050BD2C /* SJFrame */ = {
+			isa = PBXGroup;
+			children = (
+				04B51CD51B0CDDAA0050BD2C /* config.h */,
+				04B51CD61B0CDDAA0050BD2C /* NSArray+SJArray.h */,
+				04B51CD71B0CDDAA0050BD2C /* NSArray+SJArray.m */,
+				04B51CD81B0CDDAA0050BD2C /* NSDictionary+SJDictionary.h */,
+				04B51CD91B0CDDAA0050BD2C /* NSDictionary+SJDictionary.m */,
+				04B51CDA1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.h */,
+				04B51CDB1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.m */,
+				04B51CDC1B0CDDAA0050BD2C /* NSString+SJString.h */,
+				04B51CDD1B0CDDAA0050BD2C /* NSString+SJString.m */,
+				04B51CDE1B0CDDAA0050BD2C /* SJBaseViewController.h */,
+				04B51CDF1B0CDDAA0050BD2C /* SJBaseViewController.m */,
+				04B51CE01B0CDDAA0050BD2C /* SJCell.h */,
+				04B51CE11B0CDDAA0050BD2C /* SJCell.m */,
+				04B51CE21B0CDDAA0050BD2C /* SJFrame.h */,
+				04B51CE31B0CDDAA0050BD2C /* SJFunction.h */,
+				04B51CE41B0CDDAA0050BD2C /* SJFunction.m */,
+				04B51CE51B0CDDAA0050BD2C /* SJImageLabel.h */,
+				04B51CE61B0CDDAA0050BD2C /* SJImageLabel.m */,
+				04B51CE71B0CDDAA0050BD2C /* SJRegex.h */,
+				04B51CE81B0CDDAA0050BD2C /* SJRegex.m */,
+				04B51CE91B0CDDAA0050BD2C /* SJTextField.h */,
+				04B51CEA1B0CDDAA0050BD2C /* SJTextField.m */,
+				04B51CEB1B0CDDAA0050BD2C /* UIButton+SJButton.h */,
+				04B51CEC1B0CDDAA0050BD2C /* UIButton+SJButton.m */,
+				04B51CED1B0CDDAA0050BD2C /* UIColor+SJColor.h */,
+				04B51CEE1B0CDDAA0050BD2C /* UIColor+SJColor.m */,
+				04B51CEF1B0CDDAA0050BD2C /* UILabel+SJLabel.h */,
+				04B51CF01B0CDDAA0050BD2C /* UILabel+SJLabel.m */,
+				04B51CF11B0CDDAA0050BD2C /* UITableView+SJTableView.h */,
+				04B51CF21B0CDDAA0050BD2C /* UITableView+SJTableView.m */,
+				04B51CF31B0CDDAA0050BD2C /* UITextField+SJTextField.h */,
+				04B51CF41B0CDDAA0050BD2C /* UITextField+SJTextField.m */,
+				04B51CF51B0CDDAA0050BD2C /* UITextView+SJTextView.h */,
+				04B51CF61B0CDDAA0050BD2C /* UITextView+SJTextView.m */,
+				04B51CF71B0CDDAA0050BD2C /* UIView+SJView.h */,
+				04B51CF81B0CDDAA0050BD2C /* UIView+SJView.m */,
+				04B51CF91B0CDDAA0050BD2C /* UIViewController+SJViewController.h */,
+				04B51CFA1B0CDDAA0050BD2C /* UIViewController+SJViewController.m */,
+			);
+			path = SJFrame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +282,7 @@
 		04B51C2E1B0CDAAC0050BD2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SJ;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "陈少杰";
 				TargetAttributes = {
@@ -202,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B51C481B0CDAAC0050BD2C /* Main.storyboard in Resources */,
 				04B51C4D1B0CDAAC0050BD2C /* LaunchScreen.xib in Resources */,
 				04B51C4A1B0CDAAC0050BD2C /* Images.xcassets in Resources */,
 			);
@@ -222,10 +338,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B51D0B1B0CDDAA0050BD2C /* UIView+SJView.m in Sources */,
+				04B51D0A1B0CDDAA0050BD2C /* UITextView+SJTextView.m in Sources */,
+				04B51D161B0CE1AC0050BD2C /* SJGameView.m in Sources */,
+				04B51D061B0CDDAA0050BD2C /* UIColor+SJColor.m in Sources */,
+				04B51D041B0CDDAA0050BD2C /* SJTextField.m in Sources */,
+				04B51D101B0CDF660050BD2C /* SJIndexView.m in Sources */,
+				04B51CFD1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.m in Sources */,
+				04B51D051B0CDDAA0050BD2C /* UIButton+SJButton.m in Sources */,
+				04B51D131B0CE1990050BD2C /* SJGameViewController.m in Sources */,
+				04B51CFB1B0CDDAA0050BD2C /* NSArray+SJArray.m in Sources */,
 				04B51C421B0CDAAC0050BD2C /* EscapeIt.xcdatamodeld in Sources */,
+				04B51D031B0CDDAA0050BD2C /* SJRegex.m in Sources */,
 				04B51C3F1B0CDAAC0050BD2C /* AppDelegate.m in Sources */,
-				04B51C451B0CDAAC0050BD2C /* ViewController.m in Sources */,
+				04B51D0C1B0CDDAA0050BD2C /* UIViewController+SJViewController.m in Sources */,
+				04B51C451B0CDAAC0050BD2C /* SJIndexViewController.m in Sources */,
+				04B51D021B0CDDAA0050BD2C /* SJImageLabel.m in Sources */,
+				04B51CFF1B0CDDAA0050BD2C /* SJBaseViewController.m in Sources */,
+				04B51CFE1B0CDDAA0050BD2C /* NSString+SJString.m in Sources */,
+				04B51D071B0CDDAA0050BD2C /* UILabel+SJLabel.m in Sources */,
 				04B51C3C1B0CDAAC0050BD2C /* main.m in Sources */,
+				04B51D001B0CDDAA0050BD2C /* SJCell.m in Sources */,
+				04B51CFC1B0CDDAA0050BD2C /* NSDictionary+SJDictionary.m in Sources */,
+				04B51D091B0CDDAA0050BD2C /* UITextField+SJTextField.m in Sources */,
+				04B51D081B0CDDAA0050BD2C /* UITableView+SJTableView.m in Sources */,
+				04B51D011B0CDDAA0050BD2C /* SJFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04B51C461B0CDAAC0050BD2C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04B51C471B0CDAAC0050BD2C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04B51C4B1B0CDAAC0050BD2C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -349,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/JACK/Desktop/project/EscapeIt/EscapeIt/PrefixHeader.pch;
 				INFOPLIST_FILE = EscapeIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/JACK/Desktop/project/EscapeIt/EscapeIt/PrefixHeader.pch;
 				INFOPLIST_FILE = EscapeIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +549,7 @@
 				04B51C5E1B0CDAAC0050BD2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04B51C5F1B0CDAAC0050BD2C /* Build configuration list for PBXNativeTarget "EscapeItTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +558,7 @@
 				04B51C611B0CDAAC0050BD2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

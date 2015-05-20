@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SJIndexViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    SJIndexViewController *indexVC=[[SJIndexViewController alloc]init];
+    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:indexVC];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.rootViewController=nav;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
