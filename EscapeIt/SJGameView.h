@@ -10,6 +10,8 @@
 
 @interface SJGameView : UIView
 @property(nonatomic,readonly)UIImageView *backgroundImageView;
+@property(nonatomic,readonly)UILabel *markLabel;
+@property(nonatomic,readonly)UILabel *lifeLabel;
 @property(nonatomic,readonly)UIImageView *leftPeopleImageView;
 @property(nonatomic,readonly)UIImageView *rightPeopleImageView;
 

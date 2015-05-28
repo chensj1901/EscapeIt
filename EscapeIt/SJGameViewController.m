@@ -16,22 +16,33 @@
 @property(nonatomic)CGFloat thingV;
 @property(nonatomic)CGFloat createThingsP;
 @property(nonatomic)NSMutableArray *things;
+@property(nonatomic)NSUInteger mark;
+@property(nonatomic)NSInteger life;
+@property(nonatomic)NSMutableArray *hasCollisionTag;
 @end
 
 @implementation SJGameViewController
 -(void)loadSetting{
-    self.peopleV=3;
+    self.peopleV=2.5;
     self.thingV=3;
-    self.createThingsP=1./5;
+    self.createThingsP=1./8;
+    self.life=3;
+    self.mark=0;
 }
+
+-(void)loadTarget{
+    UILongPressGestureRecognizer *tap=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(didReceiveTap:)];
+    tap.minimumPressDuration=0.01;
+    [self.mainView addGestureRecognizer:tap];
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initTimer];
     
-    UILongPressGestureRecognizer *tap=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(didReceiveTap:)];
-    tap.minimumPressDuration=0.01;
-    [self.mainView addGestureRecognizer:tap];
 }
 
 -(void)didReceiveTap:(UIGestureRecognizer*)tap{
@@ -48,6 +59,8 @@
 }
 
 -(void)retry{
+    self.mark=0;
+    self.life=3;
     for (UIView *v in self.things) {
         [v removeFromSuperview];
     }
@@ -56,6 +69,8 @@
     [self.mainView.rightPeopleImageView quicklySetOriginX:WIDTH/2];
     [self initTimer];
 }
+
+
 
 -(void)update{
     static int i=0;
@@ -78,26 +93,48 @@
     for (int i=0;i<[self.things count];i++) {
         UIView *v=[self.things objectAtIndex:i];
         [v quicklySetOriginY:CGRectGetMinY(v.frame)+self.thingV];
-    if(CGRectIntersectsRect(v.frame, self.mainView.leftPeopleImageView.frame)||CGRectIntersectsRect(v.frame, self.mainView.rightPeopleImageView.frame)){
-        alert(@"GAMEOVER");
-        [self.timer invalidate];
-        [self retry];
+        
+        
+        if(CGRectIntersectsRect(v.frame, self.mainView.leftPeopleImageView.frame)||CGRectIntersectsRect(v.frame, self.mainView.rightPeopleImageView.frame)){
+            
+            if ([self.hasCollisionTag containsObject:@(v.tag)]) {
+                return;
+            }
+            [self.hasCollisionTag addObject:@(v.tag)];
+            
+            self.life--;
+            
+            if (self.life<=0) {
+                alert(@"GAMEOVER");
+                [self.timer invalidate];
+                [self retry];
+            }
         }
+        
         if(CGRectGetMinY(v.frame)>HEIGHT){
             [v removeFromSuperview];
             [self.things removeObject:v];
             i--;
+            self.mark++;
         }
     }
-
     
+    
+    self.mainView.lifeLabel.text=[NSString stringWithFormat:@"生命:%ld",(unsigned long)self.life];
+    self.mainView.markLabel.text=[NSString stringWithFormat:@"分数:%lu",(unsigned long)self.mark];
 }
 
 -(void)createOneThing{
+    static NSInteger objectTag=1;
+    
     UIView *v=[[UIView alloc]initWithFrame:CGRectMake(arc4random()%(int)(WIDTH-20), -20, 20, 20)];
     v.backgroundColor=[UIColor blackColor];
+    v.tag=objectTag;
+    
     [self.mainView addSubview:v];
     [self.things addObject:v];
+    
+    objectTag++;
 }
 
 -(NSMutableArray *)things{
@@ -107,10 +144,21 @@
     return _things;
 }
 
+-(NSMutableArray *)hasCollisionTag{
+    if (!_hasCollisionTag) {
+        _hasCollisionTag=[[NSMutableArray alloc]init];
+    }
+    return _hasCollisionTag;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)dealloc{
+}
+
 
 /*
 #pragma mark - Navigation
