@@ -13,9 +13,12 @@
 {
     CGRect _backgroundImageViewRect;
     CGRect _markLabelRect;
-    CGRect _lifeLabelRect;
     CGRect _leftPeopleImageViewRect;
     CGRect _rightPeopleImageViewRect;
+    CGRect _cloudImageViewRect;
+    CGRect _heatOneImageViewRect;
+    CGRect _heatTwoImageViewRect;
+    CGRect _heatThreeImageViewRect;
 }
 
 
@@ -23,7 +26,11 @@
 @synthesize leftPeopleImageView=_leftPeopleImageView;
 @synthesize rightPeopleImageView=_rightPeopleImageView;
 @synthesize markLabel=_markLabel;
-@synthesize lifeLabel=_lifeLabel;
+@synthesize cloudImageView=_cloudImageView;
+@synthesize heatOneImageView=_heatOneImageView;
+@synthesize heatTwoImageView=_heatTwoImageView;
+@synthesize heatThreeImageView=_heatThreeImageView;
+
 
 
 #pragma mark - 初始化
@@ -37,19 +44,26 @@
 }
 
 -(void)loadSetting{
+    CGFloat k=2.5;
     _backgroundImageViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
-    _leftPeopleImageViewRect= CGRectMake(WIDTH/2-25, HEIGHT-100, 25, 40);
-    _rightPeopleImageViewRect= CGRectMake(WIDTH/2, HEIGHT-100, 25, 40);
-    _markLabelRect= CGRectMake(50, 50, 60, 50);
-    _lifeLabelRect= CGRectMake(WIDTH-110, 50, 60, 50);
+    _leftPeopleImageViewRect= CGRectMake(WIDTH/2-107/k, HEIGHT-197/k, 107/k, 197/k);
+    _rightPeopleImageViewRect= CGRectMake(WIDTH/2, HEIGHT-188/k, 101/k, 188/k);
+    _markLabelRect= CGRectMake(0, 20, WIDTH/2, 28);
+    _cloudImageViewRect= CGRectMake(0, HEIGHT-40*HEIGHT/480., WIDTH, 40*HEIGHT/480.);
+    _heatOneImageViewRect= CGRectMake(WIDTH-150, 20, 38, 29);
+    _heatTwoImageViewRect= CGRectMake(WIDTH-100, 20, 38, 29);
+    _heatThreeImageViewRect= CGRectMake(WIDTH-50, 20, 38, 29);
 }
 
 -(void)loadUI{
     [self addSubview:self.backgroundImageView];
+    [self addSubview:self.heatOneImageView];
+    [self addSubview:self.heatTwoImageView];
+    [self addSubview:self.heatThreeImageView];
     [self addSubview:self.leftPeopleImageView];
     [self addSubview:self.rightPeopleImageView];
     [self addSubview:self.markLabel];
-    [self addSubview:self.lifeLabel];
+    [self addSubview:self.cloudImageView];
 }
 
 #pragma mark - 属性定义
@@ -57,6 +71,7 @@
 -(UIImageView *)backgroundImageView{
     if (!_backgroundImageView) {
         _backgroundImageView=[[UIImageView alloc]initWithFrame:_backgroundImageViewRect];
+        _backgroundImageView.backgroundColorHex=@"00008B";
     }
     return _backgroundImageView;
 }
@@ -64,7 +79,8 @@
 -(UIImageView *)leftPeopleImageView{
     if (!_leftPeopleImageView) {
         _leftPeopleImageView=[[UIImageView alloc]initWithFrame:_leftPeopleImageViewRect];
-        _leftPeopleImageView.backgroundColorHex=@"ff0000";
+        _leftPeopleImageView.image=[UIImage imageNamed:@"peopleLeft.png"];
+        
     }
     return _leftPeopleImageView;
 }
@@ -72,7 +88,7 @@
 -(UIImageView *)rightPeopleImageView{
     if (!_rightPeopleImageView) {
         _rightPeopleImageView=[[UIImageView alloc]initWithFrame:_rightPeopleImageViewRect];
-        _rightPeopleImageView.backgroundColorHex=@"00ff00";
+        _rightPeopleImageView.image=[UIImage imageNamed:@"peopleRIght.png"];
     }
     return _rightPeopleImageView;
 }
@@ -80,18 +96,45 @@
 -(UILabel *)markLabel{
     if (!_markLabel) {
         _markLabel=[[UILabel alloc]initWithFrame:_markLabelRect];
-        [_markLabel quicklySetFontPoint:14 textColorHex:@"313746" textAlignment:NSTextAlignmentLeft text:@"分数:0"];
+        [_markLabel quicklySetFontPoint:28 textColorHex:@"ffffff" textAlignment:NSTextAlignmentCenter text:@"0"];
     }
     return _markLabel;
 }
 
--(UILabel *)lifeLabel{
-    if (!_lifeLabel) {
-        _lifeLabel=[[UILabel alloc]initWithFrame:_lifeLabelRect];
-        [_lifeLabel quicklySetFontPoint:14 textColorHex:@"313746" textAlignment:NSTextAlignmentRight text:@"生命:3"];
+-(UIImageView *)cloudImageView{
+    if (!_cloudImageView) {
+        _cloudImageView=[[UIImageView alloc]initWithFrame:_cloudImageViewRect];
+        _cloudImageView.image=[UIImage imageNamed:@"cloud.png"];
     }
-    return _lifeLabel;
+    return _cloudImageView;
 }
+
+
+-(UIImageView *)heatOneImageView{
+    if (!_heatOneImageView) {
+        _heatOneImageView=[[UIImageView alloc]initWithFrame:_heatOneImageViewRect];
+        _heatOneImageView.image=[UIImage imageNamed:@"heat.png"];
+    }
+    return _heatOneImageView;
+}
+
+-(UIImageView *)heatTwoImageView{
+    if (!_heatTwoImageView) {
+        _heatTwoImageView=[[UIImageView alloc]initWithFrame:_heatTwoImageViewRect];
+        _heatTwoImageView.image=[UIImage imageNamed:@"heat.png"];
+    }
+    return _heatTwoImageView;
+}
+
+-(UIImageView *)heatThreeImageView{
+    if (!_heatThreeImageView) {
+        _heatThreeImageView=[[UIImageView alloc]initWithFrame:_heatThreeImageViewRect];
+        _heatThreeImageView.image=[UIImage imageNamed:@"heat.png"];
+    }
+    return _heatThreeImageView;
+}
+
+
 
 
 

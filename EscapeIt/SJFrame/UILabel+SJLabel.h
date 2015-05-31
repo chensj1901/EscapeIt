@@ -17,4 +17,5 @@
 -(void)quicklySetFontPoint:(CGFloat)point textColorHex:(NSString *)colorHex textAlignment:(NSTextAlignment)textAlignment text:(NSString*)text;
 -(void)quicklySetFontPoint:(CGFloat)point textColorHex:(NSString *)colorHex textAlignment:(NSTextAlignment)textAlignment lineBreakMode:(NSLineBreakMode)lineBreakMode;
 -(void)quicklyHighlightedTextWithRange:(NSRange)range;
+-(id)copy;
 @end

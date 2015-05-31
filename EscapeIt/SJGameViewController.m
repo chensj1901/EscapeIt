@@ -8,6 +8,8 @@
 
 #import "SJGameViewController.h"
 #import "SJGameView.h"
+#import <POP.h>
+
 @interface SJGameViewController ()
 @property(nonatomic)SJGameView *mainView;
 @property(nonatomic)NSTimer *timer;
@@ -70,7 +72,31 @@
     [self initTimer];
 }
 
+-(void)gameOver{
+    [self.timer invalidate];
+    for (UIView *v in self.things) {
+        [v removeFromSuperview];
+    }
+    
+//    UILabel *markLabel=[[UILabel alloc]initWithFrame:self.mainView.markLabel.frame];
+//    markLabel=[self.mainView.markLabel copy];
+//    [self.mainView addSubview:markLabel];
+    
+    
 
+    POPSpringAnimation *shockAnimate=[POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
+    shockAnimate.toValue=[NSValue valueWithCGPoint:CGPointMake(WIDTH/2, HEIGHT/2)];
+    shockAnimate.springSpeed=20;
+    shockAnimate.springBounciness=12;
+    
+    [self.mainView.markLabel pop_addAnimation:shockAnimate forKey:@"shock"];
+    
+    [UIView animateWithDuration:0.6 animations:^{
+    
+        [self.mainView.leftPeopleImageView quicklySetOriginX:WIDTH/2-CGRectGetWidth(self.mainView.leftPeopleImageView.frame)];
+        [self.mainView.rightPeopleImageView quicklySetOriginX:WIDTH/2];
+    }];
+}
 
 -(void)update{
     static int i=0;
@@ -98,16 +124,15 @@
         if(CGRectIntersectsRect(v.frame, self.mainView.leftPeopleImageView.frame)||CGRectIntersectsRect(v.frame, self.mainView.rightPeopleImageView.frame)){
             
             if ([self.hasCollisionTag containsObject:@(v.tag)]) {
-                return;
+                continue;
             }
             [self.hasCollisionTag addObject:@(v.tag)];
             
             self.life--;
             
             if (self.life<=0) {
-                alert(@"GAMEOVER");
-                [self.timer invalidate];
-                [self retry];
+                [self gameOver];
+                continue;
             }
         }
         
@@ -119,22 +144,42 @@
         }
     }
     
+    if (self.life==3) {
+        self.mainView.heatOneImageView.image=[UIImage imageNamed:@"heat.png"];
+        self.mainView.heatTwoImageView.image=[UIImage imageNamed:@"heat.png"];
+        self.mainView.heatThreeImageView.image=[UIImage imageNamed:@"heat.png"];
+    }else if(self.life==2){
+        self.mainView.heatOneImageView.image=[UIImage imageNamed:@"heat.png"];
+        self.mainView.heatTwoImageView.image=[UIImage imageNamed:@"heat.png"];
+        self.mainView.heatThreeImageView.image=[UIImage imageNamed:@"heat_h.png"];
+    }else if(self.life==1){
+        self.mainView.heatOneImageView.image=[UIImage imageNamed:@"heat.png"];
+        self.mainView.heatTwoImageView.image=[UIImage imageNamed:@"heat_h.png"];
+        self.mainView.heatThreeImageView.image=[UIImage imageNamed:@"heat_h.png"];
+    }else{
+        self.mainView.heatOneImageView.image=[UIImage imageNamed:@"heat_h.png"];
+        self.mainView.heatTwoImageView.image=[UIImage imageNamed:@"heat_h.png"];
+        self.mainView.heatThreeImageView.image=[UIImage imageNamed:@"heat_h.png"];
+    }
     
-    self.mainView.lifeLabel.text=[NSString stringWithFormat:@"生命:%ld",(unsigned long)self.life];
-    self.mainView.markLabel.text=[NSString stringWithFormat:@"分数:%lu",(unsigned long)self.mark];
+    self.mainView.markLabel.text=[NSString stringWithFormat:@"%lu",(unsigned long)self.mark];
 }
 
 -(void)createOneThing{
     static NSInteger objectTag=1;
     
-    UIView *v=[[UIView alloc]initWithFrame:CGRectMake(arc4random()%(int)(WIDTH-20), -20, 20, 20)];
-    v.backgroundColor=[UIColor blackColor];
+    UIImageView *v=[[UIImageView alloc]initWithFrame:CGRectMake(arc4random()%(int)(WIDTH-20), -20, 20, 20)];
+    v.image=[UIImage imageNamed:@"bomb.png"];
     v.tag=objectTag;
     
-    [self.mainView addSubview:v];
+    [self.mainView.backgroundImageView addSubview:v];
     [self.things addObject:v];
     
     objectTag++;
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 -(NSMutableArray *)things{

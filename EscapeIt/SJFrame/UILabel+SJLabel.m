@@ -70,4 +70,14 @@
     self.attributedText=t;
 }
 
+-(id)copy{
+    UILabel *newLabel=[[UILabel alloc]initWithFrame:self.frame];
+    newLabel.text=self.text;
+    newLabel.textColor=self.textColor;
+    newLabel.backgroundColor=self.backgroundColor;
+    newLabel.textAlignment=self.textAlignment;
+    newLabel.font=self.font;
+    return newLabel;
+}
+
 @end
