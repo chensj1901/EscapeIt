@@ -19,6 +19,7 @@
     CGRect _heatOneImageViewRect;
     CGRect _heatTwoImageViewRect;
     CGRect _heatThreeImageViewRect;
+    CGRect _retryBtnRect;
 }
 
 
@@ -30,6 +31,8 @@
 @synthesize heatOneImageView=_heatOneImageView;
 @synthesize heatTwoImageView=_heatTwoImageView;
 @synthesize heatThreeImageView=_heatThreeImageView;
+@synthesize retryBtn=_retryBtn;
+
 
 
 
@@ -53,6 +56,7 @@
     _heatOneImageViewRect= CGRectMake(WIDTH-150, 20, 38, 29);
     _heatTwoImageViewRect= CGRectMake(WIDTH-100, 20, 38, 29);
     _heatThreeImageViewRect= CGRectMake(WIDTH-50, 20, 38, 29);
+    _retryBtnRect=  CGRectMake((WIDTH-130)/2, HEIGHT-160, 130, 45);
 }
 
 -(void)loadUI{
@@ -64,6 +68,7 @@
     [self addSubview:self.rightPeopleImageView];
     [self addSubview:self.markLabel];
     [self addSubview:self.cloudImageView];
+    [self addSubview:self.retryBtn];
 }
 
 #pragma mark - 属性定义
@@ -134,6 +139,24 @@
     return _heatThreeImageView;
 }
 
+-(UIButton *)retryBtn{
+    if (!_retryBtn) {
+        _retryBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+        _retryBtn.frame=_retryBtnRect;
+        [_retryBtn quicklySetFontPoint:28 textColorHex:@"652709" textAlignment:NSTextAlignmentCenter title:@"retry"];
+        _retryBtn.backgroundColorHex=@"6CCA5C";
+        _retryBtn.layer.borderColor=[[UIColor colorWithHex:@"652709"]CGColor];
+        _retryBtn.layer.cornerRadius=5;
+        _retryBtn.layer.borderWidth=4;
+        _retryBtn.hidden=YES;
+    }
+    return _retryBtn;
+}
+
+-(void)reloadUI{
+    self.retryBtn.hidden=YES;
+    self.markLabel.frame=_markLabelRect;
+}
 
 
 

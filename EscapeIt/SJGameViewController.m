@@ -23,6 +23,11 @@
 @property(nonatomic)NSMutableArray *hasCollisionTag;
 @end
 
+
+@interface SJGameViewController ()<UIGestureRecognizerDelegate>
+
+@end
+
 @implementation SJGameViewController
 -(void)loadSetting{
     self.peopleV=2.5;
@@ -35,10 +40,20 @@
 -(void)loadTarget{
     UILongPressGestureRecognizer *tap=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(didReceiveTap:)];
     tap.minimumPressDuration=0.01;
+    tap.delegate=self;
     [self.mainView addGestureRecognizer:tap];
+    
+    [self.mainView.retryBtn addTarget:self action:@selector(retry) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+
+    if ([touch.view isKindOfClass:[UIButton class]]) {
+        return NO;
+    }
+    return YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -70,6 +85,8 @@
     [self.mainView.leftPeopleImageView quicklySetOriginX:WIDTH/2-CGRectGetWidth(self.mainView.leftPeopleImageView.frame)];
     [self.mainView.rightPeopleImageView quicklySetOriginX:WIDTH/2];
     [self initTimer];
+    
+    [self.mainView reloadUI];
 }
 
 -(void)gameOver{
@@ -96,6 +113,8 @@
         [self.mainView.leftPeopleImageView quicklySetOriginX:WIDTH/2-CGRectGetWidth(self.mainView.leftPeopleImageView.frame)];
         [self.mainView.rightPeopleImageView quicklySetOriginX:WIDTH/2];
     }];
+    
+    self.mainView.retryBtn.hidden=NO;
 }
 
 -(void)update{

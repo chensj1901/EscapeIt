@@ -16,6 +16,7 @@
 @property(nonatomic,readonly)UIImageView *heatOneImageView;
 @property(nonatomic,readonly)UIImageView *heatTwoImageView;
 @property(nonatomic,readonly)UIImageView *heatThreeImageView;
-
+@property(nonatomic,readonly)UIButton *retryBtn;
 @property(nonatomic,readonly)UIImageView *cloudImageView;
+-(void)reloadUI;
 @end
