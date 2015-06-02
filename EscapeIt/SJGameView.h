@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIEffectDesignerView.h"
 
 @interface SJGameView : UIView
 @property(nonatomic,readonly)UIImageView *backgroundImageView;
@@ -17,6 +18,6 @@
 @property(nonatomic,readonly)UIImageView *heatTwoImageView;
 @property(nonatomic,readonly)UIImageView *heatThreeImageView;
 @property(nonatomic,readonly)UIButton *retryBtn;
-@property(nonatomic,readonly)UIImageView *cloudImageView;
+@property(nonatomic,readonly)UIEffectDesignerView *cloudImageView;
 -(void)reloadUI;
 @end

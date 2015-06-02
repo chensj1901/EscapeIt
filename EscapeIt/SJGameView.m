@@ -49,10 +49,10 @@
 -(void)loadSetting{
     CGFloat k=2.5;
     _backgroundImageViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
-    _leftPeopleImageViewRect= CGRectMake(WIDTH/2-107/k, HEIGHT-197/k, 107/k, 197/k);
-    _rightPeopleImageViewRect= CGRectMake(WIDTH/2, HEIGHT-188/k, 101/k, 188/k);
+    _leftPeopleImageViewRect= CGRectMake(WIDTH/2-107/k, HEIGHT-197/k-50, 107/k, 197/k);
+    _rightPeopleImageViewRect= CGRectMake(WIDTH/2, HEIGHT-188/k-50, 101/k, 188/k);
     _markLabelRect= CGRectMake(0, 20, WIDTH/2, 28);
-    _cloudImageViewRect= CGRectMake(0, HEIGHT-40*HEIGHT/480., WIDTH, 40*HEIGHT/480.);
+    _cloudImageViewRect= CGRectMake(0, HEIGHT-130, WIDTH, 130);
     _heatOneImageViewRect= CGRectMake(WIDTH-150, 20, 38, 29);
     _heatTwoImageViewRect= CGRectMake(WIDTH-100, 20, 38, 29);
     _heatThreeImageViewRect= CGRectMake(WIDTH-50, 20, 38, 29);
@@ -106,10 +106,13 @@
     return _markLabel;
 }
 
--(UIImageView *)cloudImageView{
+-(UIEffectDesignerView *)cloudImageView{
     if (!_cloudImageView) {
-        _cloudImageView=[[UIImageView alloc]initWithFrame:_cloudImageViewRect];
-        _cloudImageView.image=[UIImage imageNamed:@"cloud.png"];
+        _cloudImageView=[[UIEffectDesignerView alloc]initWithFile:@"cloud.ped"];
+        _cloudImageView.emitter.position=CGPointMake(_cloudImageViewRect.origin.x+_cloudImageViewRect.size.width/2, _cloudImageViewRect.origin.y+_cloudImageViewRect.size.height/2);
+        
+        _cloudImageView.emitter.emitterSize=_cloudImageViewRect.size;
+//        _cloudImageView.image=[UIImage imageNamed:@"cloud.png"];
     }
     return _cloudImageView;
 }

@@ -46,6 +46,10 @@
 		04CF0EA81B1B0A3100DBA635 /* start3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CF0E9F1B1B0A3100DBA635 /* start3@2x.png */; };
 		04CF0EAA1B1B138400DBA635 /* heat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CF0EA91B1B138400DBA635 /* heat@2x.png */; };
 		04CF0EAC1B1B13DD00DBA635 /* heat_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04CF0EAB1B1B13DD00DBA635 /* heat_h@2x.png */; };
+		3347D19A1B1D751C001BB2B9 /* UIImageView+SJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1991B1D751C001BB2B9 /* UIImageView+SJImageView.m */; };
+		3347D1A81B1DDFC5001BB2B9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1A51B1DDFC5001BB2B9 /* NSData+Base64.m */; };
+		3347D1A91B1DDFC5001BB2B9 /* UIEffectDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */; };
+		3347D1AB1B1DE04D001BB2B9 /* cloud.ped in Resources */ = {isa = PBXBuildFile; fileRef = 3347D1AA1B1DE04D001BB2B9 /* cloud.ped */; };
 		B314AE39C318F16282B4BFEA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0306BAA0C1FE01D1264E54B6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +135,13 @@
 		04CF0EA91B1B138400DBA635 /* heat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heat@2x.png"; sourceTree = "<group>"; };
 		04CF0EAB1B1B13DD00DBA635 /* heat_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heat_h@2x.png"; sourceTree = "<group>"; };
 		1EEB202F10DE1C8B41744BE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3347D1981B1D751C001BB2B9 /* UIImageView+SJImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SJImageView.h"; sourceTree = "<group>"; };
+		3347D1991B1D751C001BB2B9 /* UIImageView+SJImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SJImageView.m"; sourceTree = "<group>"; };
+		3347D1A41B1DDFC5001BB2B9 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		3347D1A51B1DDFC5001BB2B9 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		3347D1A61B1DDFC5001BB2B9 /* UIEffectDesignerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEffectDesignerView.h; sourceTree = "<group>"; };
+		3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEffectDesignerView.m; sourceTree = "<group>"; };
+		3347D1AA1B1DE04D001BB2B9 /* cloud.ped */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cloud.ped; sourceTree = "<group>"; };
 		E9447FE0D33A025AEF7B86A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +187,7 @@
 		04B51C381B0CDAAC0050BD2C /* EscapeIt */ = {
 			isa = PBXGroup;
 			children = (
+				3347D1A31B1DDFC5001BB2B9 /* UIEffectDesignerView */,
 				04B51CD41B0CDDAA0050BD2C /* SJFrame */,
 				04B51C3D1B0CDAAC0050BD2C /* AppDelegate.h */,
 				04B51C3E1B0CDAAC0050BD2C /* AppDelegate.m */,
@@ -198,6 +210,7 @@
 		04B51C391B0CDAAC0050BD2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3347D1AA1B1DE04D001BB2B9 /* cloud.ped */,
 				04CF0EAB1B1B13DD00DBA635 /* heat_h@2x.png */,
 				04CF0EA91B1B138400DBA635 /* heat@2x.png */,
 				04CF0E971B1B0A3100DBA635 /* bomb@2x.png */,
@@ -237,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				04B51CD51B0CDDAA0050BD2C /* config.h */,
+				3347D1981B1D751C001BB2B9 /* UIImageView+SJImageView.h */,
+				3347D1991B1D751C001BB2B9 /* UIImageView+SJImageView.m */,
 				04B51CD61B0CDDAA0050BD2C /* NSArray+SJArray.h */,
 				04B51CD71B0CDDAA0050BD2C /* NSArray+SJArray.m */,
 				04B51CD81B0CDDAA0050BD2C /* NSDictionary+SJDictionary.h */,
@@ -276,6 +291,17 @@
 				04B51CFA1B0CDDAA0050BD2C /* UIViewController+SJViewController.m */,
 			);
 			path = SJFrame;
+			sourceTree = "<group>";
+		};
+		3347D1A31B1DDFC5001BB2B9 /* UIEffectDesignerView */ = {
+			isa = PBXGroup;
+			children = (
+				3347D1A41B1DDFC5001BB2B9 /* NSData+Base64.h */,
+				3347D1A51B1DDFC5001BB2B9 /* NSData+Base64.m */,
+				3347D1A61B1DDFC5001BB2B9 /* UIEffectDesignerView.h */,
+				3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */,
+			);
+			path = UIEffectDesignerView;
 			sourceTree = "<group>";
 		};
 		844D238D1C77A2DED0B70D8E /* Frameworks */ = {
@@ -389,6 +415,7 @@
 				04CF0EA71B1B0A3100DBA635 /* start2@2x.png in Resources */,
 				04CF0EA51B1B0A3100DBA635 /* playBtn@2x.png in Resources */,
 				04B51C4A1B0CDAAC0050BD2C /* Images.xcassets in Resources */,
+				3347D1AB1B1DE04D001BB2B9 /* cloud.ped in Resources */,
 				04CF0EA41B1B0A3100DBA635 /* peopleRIght@2x.png in Resources */,
 				04CF0EA81B1B0A3100DBA635 /* start3@2x.png in Resources */,
 			);
@@ -441,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3347D19A1B1D751C001BB2B9 /* UIImageView+SJImageView.m in Sources */,
 				04B51D0B1B0CDDAA0050BD2C /* UIView+SJView.m in Sources */,
 				04B51D0A1B0CDDAA0050BD2C /* UITextView+SJTextView.m in Sources */,
 				04B51D161B0CE1AC0050BD2C /* SJGameView.m in Sources */,
@@ -448,6 +476,7 @@
 				04B51D041B0CDDAA0050BD2C /* SJTextField.m in Sources */,
 				04B51D101B0CDF660050BD2C /* SJIndexView.m in Sources */,
 				04B51CFD1B0CDDAA0050BD2C /* NSFileManager+SJFileManager.m in Sources */,
+				3347D1A91B1DDFC5001BB2B9 /* UIEffectDesignerView.m in Sources */,
 				04B51D051B0CDDAA0050BD2C /* UIButton+SJButton.m in Sources */,
 				04B51D131B0CE1990050BD2C /* SJGameViewController.m in Sources */,
 				04B51CFB1B0CDDAA0050BD2C /* NSArray+SJArray.m in Sources */,
@@ -457,6 +486,7 @@
 				04B51D0C1B0CDDAA0050BD2C /* UIViewController+SJViewController.m in Sources */,
 				04B51C451B0CDAAC0050BD2C /* SJIndexViewController.m in Sources */,
 				04B51D021B0CDDAA0050BD2C /* SJImageLabel.m in Sources */,
+				3347D1A81B1DDFC5001BB2B9 /* NSData+Base64.m in Sources */,
 				04B51CFF1B0CDDAA0050BD2C /* SJBaseViewController.m in Sources */,
 				04B51CFE1B0CDDAA0050BD2C /* NSString+SJString.m in Sources */,
 				04B51D071B0CDDAA0050BD2C /* UILabel+SJLabel.m in Sources */,
@@ -584,6 +614,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/EscapeIt/PrefixHeader.pch";
 				INFOPLIST_FILE = EscapeIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -597,6 +628,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/EscapeIt/PrefixHeader.pch";
 				INFOPLIST_FILE = EscapeIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

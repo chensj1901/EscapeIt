@@ -23,6 +23,7 @@
 #import "UIViewController+SJViewController.h"
 #import "UITextField+SJTextField.h"
 #import "UITableView+SJTableView.h"
+#import "UIImageView+SJImageView.h"
 
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 
