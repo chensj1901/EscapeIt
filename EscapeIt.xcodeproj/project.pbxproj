@@ -50,6 +50,11 @@
 		3347D1A81B1DDFC5001BB2B9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1A51B1DDFC5001BB2B9 /* NSData+Base64.m */; };
 		3347D1A91B1DDFC5001BB2B9 /* UIEffectDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */; };
 		3347D1AB1B1DE04D001BB2B9 /* cloud.ped in Resources */ = {isa = PBXBuildFile; fileRef = 3347D1AA1B1DE04D001BB2B9 /* cloud.ped */; };
+		33A630721B21C23C005B278E /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A6306D1B21C23C005B278E /* 0.png */; };
+		33A630731B21C23C005B278E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A6306E1B21C23C005B278E /* 1.png */; };
+		33A630741B21C23C005B278E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A6306F1B21C23C005B278E /* 2.png */; };
+		33A630751B21C23C005B278E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A630701B21C23C005B278E /* 3.png */; };
+		33A630761B21C23C005B278E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A630711B21C23C005B278E /* 4.png */; };
 		B314AE39C318F16282B4BFEA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0306BAA0C1FE01D1264E54B6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +147,11 @@
 		3347D1A61B1DDFC5001BB2B9 /* UIEffectDesignerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEffectDesignerView.h; sourceTree = "<group>"; };
 		3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEffectDesignerView.m; sourceTree = "<group>"; };
 		3347D1AA1B1DE04D001BB2B9 /* cloud.ped */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cloud.ped; sourceTree = "<group>"; };
+		33A6306D1B21C23C005B278E /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		33A6306E1B21C23C005B278E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		33A6306F1B21C23C005B278E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		33A630701B21C23C005B278E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		33A630711B21C23C005B278E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		E9447FE0D33A025AEF7B86A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +220,7 @@
 		04B51C391B0CDAAC0050BD2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33A6306C1B21C23C005B278E /* arrow01_bomb.img */,
 				3347D1AA1B1DE04D001BB2B9 /* cloud.ped */,
 				04CF0EAB1B1B13DD00DBA635 /* heat_h@2x.png */,
 				04CF0EA91B1B138400DBA635 /* heat@2x.png */,
@@ -302,6 +313,18 @@
 				3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */,
 			);
 			path = UIEffectDesignerView;
+			sourceTree = "<group>";
+		};
+		33A6306C1B21C23C005B278E /* arrow01_bomb.img */ = {
+			isa = PBXGroup;
+			children = (
+				33A6306D1B21C23C005B278E /* 0.png */,
+				33A6306E1B21C23C005B278E /* 1.png */,
+				33A6306F1B21C23C005B278E /* 2.png */,
+				33A630701B21C23C005B278E /* 3.png */,
+				33A630711B21C23C005B278E /* 4.png */,
+			);
+			path = arrow01_bomb.img;
 			sourceTree = "<group>";
 		};
 		844D238D1C77A2DED0B70D8E /* Frameworks */ = {
@@ -406,13 +429,18 @@
 			files = (
 				04CF0EA21B1B0A3100DBA635 /* logo_c@2x.png in Resources */,
 				04CF0EA11B1B0A3100DBA635 /* cloud@2x.png in Resources */,
+				33A630741B21C23C005B278E /* 2.png in Resources */,
+				33A630751B21C23C005B278E /* 3.png in Resources */,
 				04CF0EAC1B1B13DD00DBA635 /* heat_h@2x.png in Resources */,
 				04CF0EA61B1B0A3100DBA635 /* start1@2x.png in Resources */,
 				04CF0EA01B1B0A3100DBA635 /* bomb@2x.png in Resources */,
 				04B51C4D1B0CDAAC0050BD2C /* LaunchScreen.xib in Resources */,
+				33A630721B21C23C005B278E /* 0.png in Resources */,
 				04CF0EAA1B1B138400DBA635 /* heat@2x.png in Resources */,
 				04CF0EA31B1B0A3100DBA635 /* peopleLeft@2x.png in Resources */,
+				33A630731B21C23C005B278E /* 1.png in Resources */,
 				04CF0EA71B1B0A3100DBA635 /* start2@2x.png in Resources */,
+				33A630761B21C23C005B278E /* 4.png in Resources */,
 				04CF0EA51B1B0A3100DBA635 /* playBtn@2x.png in Resources */,
 				04B51C4A1B0CDAAC0050BD2C /* Images.xcassets in Resources */,
 				3347D1AB1B1DE04D001BB2B9 /* cloud.ped in Resources */,
