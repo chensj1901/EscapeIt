@@ -9,8 +9,10 @@
 #import "SJGameViewController.h"
 #import "SJGameView.h"
 #import <POP.h>
+#import "AdMoGoDelegateProtocol.h"
+#import "AdMoGoWebBrowserControllerUserDelegate.h"
 
-@interface SJGameViewController ()
+@interface SJGameViewController ()<AdMoGoDelegate,AdMoGoWebBrowserControllerUserDelegate>
 @property(nonatomic)SJGameView *mainView;
 @property(nonatomic)NSTimer *timer;
 @property(nonatomic)BOOL isTouch;
@@ -45,6 +47,10 @@
     
     [self.mainView.retryBtn addTarget:self action:@selector(retry) forControlEvents:UIControlEventTouchUpInside];
     
+}
+
+-(void)loadUI{
+    self.mainView.adMogobarView.delegate=self;
 }
 
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
@@ -223,6 +229,92 @@
 -(void)dealloc{
 }
 
+
+#pragma mark -
+#pragma mark AdMoGoDelegate delegate
+/*
+ 返回广告rootViewController
+ */
+- (UIViewController *)viewControllerForPresentingModalView{
+    return self;
+}
+
+
+
+/**
+ * 广告开始请求回调
+ */
+- (void)adMoGoDidStartAd:(AdMoGoView *)adMoGoView{
+    NSLog(@"广告开始请求回调");}
+/**
+ * 广告接收成功回调
+ */
+- (void)adMoGoDidReceiveAd:(AdMoGoView *)adMoGoView{
+    NSLog(@"%@",NSStringFromCGRect(adMoGoView.frame));
+    NSLog(@"广告接收成功回调");
+}
+/**
+ * 广告接收失败回调
+ */
+- (void)adMoGoDidFailToReceiveAd:(AdMoGoView *)adMoGoView didFailWithError:(NSError *)error{
+    NSLog(@"广告接收失败回调");
+    
+}
+/**
+ * 点击广告回调
+ */
+- (void)adMoGoClickAd:(AdMoGoView *)adMoGoView{
+    NSLog(@"点击广告回调");
+}
+/**
+ *You can get notified when the user delete the ad
+ 广告关闭回调
+ */
+- (void)adMoGoDeleteAd:(AdMoGoView *)adMoGoView{
+    NSLog(@"广告关闭回调");
+}
+
+#pragma mark -
+#pragma mark AdMoGoWebBrowserControllerUserDelegate delegate
+
+/*
+ 浏览器将要展示
+ */
+- (void)webBrowserWillAppear{
+    NSLog(@"浏览器将要展示");
+}
+
+/*
+ 浏览器已经展示
+ */
+- (void)webBrowserDidAppear{
+    NSLog(@"浏览器已经展示");
+}
+
+/*
+ 浏览器将要关闭
+ */
+- (void)webBrowserWillClosed{
+    NSLog(@"浏览器将要关闭");
+}
+
+/*
+ 浏览器已经关闭
+ */
+- (void)webBrowserDidClosed{
+    NSLog(@"浏览器已经关闭");
+}
+
+/**
+ *直接下载类广告 是否弹出Alert确认
+ */
+-(BOOL)shouldAlertQAView:(UIAlertView *)alertView{
+    return NO;
+}
+
+- (void)webBrowserShare:(NSString *)url{
+    
+}
 
 /*
 #pragma mark - Navigation

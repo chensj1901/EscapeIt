@@ -7,6 +7,7 @@
 //
 
 #import "SJGameView.h"
+#import "config.h"
 
 @implementation SJGameView
 
@@ -32,6 +33,7 @@
 @synthesize heatTwoImageView=_heatTwoImageView;
 @synthesize heatThreeImageView=_heatThreeImageView;
 @synthesize retryBtn=_retryBtn;
+@synthesize adMogobarView=_adMogobarView;
 
 
 
@@ -69,6 +71,7 @@
     [self addSubview:self.markLabel];
     [self addSubview:self.cloudImageView];
     [self addSubview:self.retryBtn];
+    [self addSubview:self.adMogobarView];
 }
 
 #pragma mark - 属性定义
@@ -106,13 +109,14 @@
     return _markLabel;
 }
 
--(UIEffectDesignerView *)cloudImageView{
+-(UIImageView *)cloudImageView{
     if (!_cloudImageView) {
-        _cloudImageView=[[UIEffectDesignerView alloc]initWithFile:@"cloud.ped"];
-        _cloudImageView.emitter.position=CGPointMake(_cloudImageViewRect.origin.x+_cloudImageViewRect.size.width/2, _cloudImageViewRect.origin.y+_cloudImageViewRect.size.height/2);
+//        _cloudImageView=[[UIEffectDesignerView alloc]initWithFile:@"cloud.ped"];
+//        _cloudImageView.emitter.position=CGPointMake(_cloudImageViewRect.origin.x+_cloudImageViewRect.size.width/2, _cloudImageViewRect.origin.y+_cloudImageViewRect.size.height/2);
         
-        _cloudImageView.emitter.emitterSize=_cloudImageViewRect.size;
-//        _cloudImageView.image=[UIImage imageNamed:@"cloud.png"];
+//        _cloudImageView.emitter.emitterSize=_cloudImageViewRect.size;
+        _cloudImageView=[[UIImageView alloc]initWithFrame:_cloudImageViewRect];
+        _cloudImageView.image=[UIImage imageNamed:@"cloud.png"];
     }
     return _cloudImageView;
 }
@@ -154,6 +158,13 @@
         _retryBtn.hidden=YES;
     }
     return _retryBtn;
+}
+
+-(UIView *)adMogobarView{
+    if (!_adMogobarView) {
+        _adMogobarView=[[AdMoGoView alloc]initWithAppKey:ADS_APPKEY adType:AdViewTypeNormalBanner adMoGoViewDelegate:nil adViewPointType:AdMoGoViewPointTypeDown_middle];
+    }
+    return _adMogobarView;
 }
 
 -(void)reloadUI{
