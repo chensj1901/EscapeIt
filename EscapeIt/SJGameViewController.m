@@ -11,6 +11,7 @@
 #import <POP.h>
 #import "AdMoGoDelegateProtocol.h"
 #import "AdMoGoWebBrowserControllerUserDelegate.h"
+#import "SJMarkManager.h"
 
 @interface SJGameViewController ()<AdMoGoDelegate,AdMoGoWebBrowserControllerUserDelegate>
 @property(nonatomic)SJGameView *mainView;
@@ -126,6 +127,16 @@
 -(void)update{
     static int i=0;
     i++;
+    
+//    static float scale=1;
+//    if (i%1000<500) {
+//        scale+=0.0005;
+//    }else{
+//        scale-=0.0005;
+//    }
+//    
+//    self.mainView.backgroundImageView.transform=CGAffineTransformMakeScale(scale, scale);
+    
     if (i%10==0) {
         if ((arc4random()%100)<(self.createThingsP*100)) {
             [self createOneThing];
@@ -142,7 +153,7 @@
     }
     
     for (int i=0;i<[self.things count];i++) {
-        UIView *v=[self.things objectAtIndex:i];
+        UIImageView *v=(UIImageView*)[self.things objectAtIndex:i];
         [v quicklySetOriginY:CGRectGetMinY(v.frame)+self.thingV];
         
         
@@ -153,6 +164,9 @@
             }
             [self.hasCollisionTag addObject:@(v.tag)];
             
+            [self showBombEffect:v];
+            //[v startAnimating];
+            
             self.life--;
             
             if (self.life<=0) {
@@ -162,6 +176,7 @@
         }
         
         if(CGRectGetMinY(v.frame)>HEIGHT){
+            [self showBombEffect:v];
             [v removeFromSuperview];
             [self.things removeObject:v];
             i--;
@@ -187,7 +202,32 @@
         self.mainView.heatThreeImageView.image=[UIImage imageNamed:@"heat_h.png"];
     }
     
+    [SJMarkManager refreshMarkWithMark:self.mark];
     self.mainView.markLabel.text=[NSString stringWithFormat:@"%lu",(unsigned long)self.mark];
+}
+
+-(void)showBombEffect:(UIView *)obj{
+    if (obj.hidden) {
+        return;
+    }
+    obj.hidden=YES;
+    
+    NSMutableArray *imgs=[NSMutableArray new];
+    for (int i=0; i<8; i++) {
+        [imgs addObject:[UIImage imageNamed:[NSString stringWithFormat:@"%d.png",i]]];
+    }
+    
+    UIImageView *bomb=[[UIImageView alloc]initWithFrame:obj.frame];
+    bomb.animationImages=imgs;
+    bomb.animationDuration=0.6;
+    bomb.transform=CGAffineTransformMakeScale(2, 2);
+    [bomb startAnimating];
+    [self.mainView addSubview:bomb];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [bomb stopAnimating];
+        [bomb removeFromSuperview];
+    });
 }
 
 -(void)createOneThing{

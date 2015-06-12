@@ -48,7 +48,9 @@
 -(UIImageView *)backgroundImageView{
     if (!_backgroundImageView) {
         _backgroundImageView=[[UIImageView alloc]initWithFrame:_backgroundImageViewRect];
-        _backgroundImageView.backgroundColorHex=@"00008B";
+        
+        _backgroundImageView.image=[UIImage imageNamed:@"bg.jpg"];
+        //_backgroundImageView.backgroundColorHex=@"00008B";
     }
     return _backgroundImageView;
 }
