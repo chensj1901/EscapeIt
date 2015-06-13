@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SJIndexView : UIView
+@property(nonatomic,readonly)UILabel *maxMarkLabel;
 @property(nonatomic,readonly)UIImageView *backgroundImageView;
 @property(nonatomic,readonly)UIImageView *logoImageView;
 @property(nonatomic,readonly)UIButton *startBtn;

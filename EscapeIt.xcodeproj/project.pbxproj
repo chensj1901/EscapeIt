@@ -100,6 +100,10 @@
 		332D274F1B270501004CE08F /* adwo_videoSoundBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 332D27241B270501004CE08F /* adwo_videoSoundBig.png */; };
 		332D27501B270501004CE08F /* adwo_videoTimeRectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 332D27251B270501004CE08F /* adwo_videoTimeRectangle.png */; };
 		332D27511B270501004CE08F /* adwo_videoTimeRectangleBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 332D27261B270501004CE08F /* adwo_videoTimeRectangleBig.png */; };
+		332D5BE71B2C28250025F4F6 /* logo_e@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 332D5BE41B2C28250025F4F6 /* logo_e@2x.png */; };
+		332D5BE81B2C28250025F4F6 /* startBtn_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 332D5BE51B2C28250025F4F6 /* startBtn_c@2x.png */; };
+		332D5BE91B2C28250025F4F6 /* startBtn_e@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 332D5BE61B2C28250025F4F6 /* startBtn_e@2x.png */; };
+		332D5BEC1B2C2E930025F4F6 /* SJResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 332D5BEB1B2C2E930025F4F6 /* SJResultView.m */; };
 		3347D19A1B1D751C001BB2B9 /* UIImageView+SJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1991B1D751C001BB2B9 /* UIImageView+SJImageView.m */; };
 		3347D1A81B1DDFC5001BB2B9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1A51B1DDFC5001BB2B9 /* NSData+Base64.m */; };
 		3347D1A91B1DDFC5001BB2B9 /* UIEffectDesignerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347D1A71B1DDFC5001BB2B9 /* UIEffectDesignerView.m */; };
@@ -248,6 +252,11 @@
 		332D27241B270501004CE08F /* adwo_videoSoundBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoSoundBig.png; sourceTree = "<group>"; };
 		332D27251B270501004CE08F /* adwo_videoTimeRectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoTimeRectangle.png; sourceTree = "<group>"; };
 		332D27261B270501004CE08F /* adwo_videoTimeRectangleBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adwo_videoTimeRectangleBig.png; sourceTree = "<group>"; };
+		332D5BE41B2C28250025F4F6 /* logo_e@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_e@2x.png"; path = "UI/logo_e@2x.png"; sourceTree = "<group>"; };
+		332D5BE51B2C28250025F4F6 /* startBtn_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "startBtn_c@2x.png"; path = "UI/startBtn_c@2x.png"; sourceTree = "<group>"; };
+		332D5BE61B2C28250025F4F6 /* startBtn_e@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "startBtn_e@2x.png"; path = "UI/startBtn_e@2x.png"; sourceTree = "<group>"; };
+		332D5BEA1B2C2E930025F4F6 /* SJResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJResultView.h; sourceTree = "<group>"; };
+		332D5BEB1B2C2E930025F4F6 /* SJResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJResultView.m; sourceTree = "<group>"; };
 		3347D1981B1D751C001BB2B9 /* UIImageView+SJImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SJImageView.h"; sourceTree = "<group>"; };
 		3347D1991B1D751C001BB2B9 /* UIImageView+SJImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SJImageView.m"; sourceTree = "<group>"; };
 		3347D1A41B1DDFC5001BB2B9 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -314,6 +323,8 @@
 				04B51D121B0CE1990050BD2C /* SJGameViewController.m */,
 				04B51D141B0CE1AC0050BD2C /* SJGameView.h */,
 				04B51D151B0CE1AC0050BD2C /* SJGameView.m */,
+				332D5BEA1B2C2E930025F4F6 /* SJResultView.h */,
+				332D5BEB1B2C2E930025F4F6 /* SJResultView.m */,
 				04B51C491B0CDAAC0050BD2C /* Images.xcassets */,
 				04B51C4B1B0CDAAC0050BD2C /* LaunchScreen.xib */,
 				04B51C401B0CDAAC0050BD2C /* EscapeIt.xcdatamodeld */,
@@ -328,6 +339,9 @@
 				33055D421B2AEB9A00E5E3CF /* golden_dodge3.img */,
 				33055D551B2B025C00E5E3CF /* bg@2x.jpg */,
 				04CF0EAB1B1B13DD00DBA635 /* heat_h@2x.png */,
+				332D5BE41B2C28250025F4F6 /* logo_e@2x.png */,
+				332D5BE51B2C28250025F4F6 /* startBtn_c@2x.png */,
+				332D5BE61B2C28250025F4F6 /* startBtn_e@2x.png */,
 				04CF0EA91B1B138400DBA635 /* heat@2x.png */,
 				04CF0E971B1B0A3100DBA635 /* bomb@2x.png */,
 				04CF0E981B1B0A3100DBA635 /* cloud@2x.png */,
@@ -656,6 +670,8 @@
 				332D274F1B270501004CE08F /* adwo_videoSoundBig.png in Resources */,
 				332D27401B270501004CE08F /* adwo_videoCloseBtnBig.png in Resources */,
 				332D27391B270501004CE08F /* adwo_recordSlider.png in Resources */,
+				332D5BE91B2C28250025F4F6 /* startBtn_e@2x.png in Resources */,
+				332D5BE71B2C28250025F4F6 /* logo_e@2x.png in Resources */,
 				33055D561B2B025C00E5E3CF /* bg@2x.jpg in Resources */,
 				33055D501B2AEB9A00E5E3CF /* 4.png in Resources */,
 				33055D521B2AEB9A00E5E3CF /* 6.png in Resources */,
@@ -664,6 +680,7 @@
 				332D27431B270501004CE08F /* adwo_videoLogo.png in Resources */,
 				332D273D1B270501004CE08F /* adwo_videoClose.png in Resources */,
 				04CF0EA71B1B0A3100DBA635 /* start2@2x.png in Resources */,
+				332D5BE81B2C28250025F4F6 /* startBtn_c@2x.png in Resources */,
 				332D27341B270501004CE08F /* adwo_cameraswitch.png in Resources */,
 				04CF0EA51B1B0A3100DBA635 /* playBtn@2x.png in Resources */,
 				33055D4E1B2AEB9A00E5E3CF /* 2.png in Resources */,
@@ -743,6 +760,7 @@
 				04B51CFB1B0CDDAA0050BD2C /* NSArray+SJArray.m in Sources */,
 				04B51C421B0CDAAC0050BD2C /* EscapeIt.xcdatamodeld in Sources */,
 				04B51D031B0CDDAA0050BD2C /* SJRegex.m in Sources */,
+				332D5BEC1B2C2E930025F4F6 /* SJResultView.m in Sources */,
 				04B51C3F1B0CDAAC0050BD2C /* AppDelegate.m in Sources */,
 				04B51D0C1B0CDDAA0050BD2C /* UIViewController+SJViewController.m in Sources */,
 				04B51C451B0CDAAC0050BD2C /* SJIndexViewController.m in Sources */,

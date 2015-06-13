@@ -12,12 +12,14 @@
 {
     CGRect _backgroundImageViewRect;
     CGRect _logoImageViewRect;
+    CGRect _maxMarkLabelRect;
     CGRect _startBtnRect;
 }
 
 
 @synthesize backgroundImageView=_backgroundImageView;
 @synthesize logoImageView=_logoImageView;
+@synthesize maxMarkLabel=_maxMarkLabel;
 @synthesize startBtn=_startBtn;
 
 
@@ -32,13 +34,15 @@
 }
 
 -(void)loadSetting{
-    _backgroundImageViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
+    _backgroundImageViewRect= CGRectMake(-HEIGHT, -HEIGHT, 2*HEIGHT, 2*HEIGHT);
     _logoImageViewRect= CGRectMake((WIDTH-483/2)/2, 100, 483/2, 123/2);
-    _startBtnRect= CGRectMake((WIDTH-130)/2, HEIGHT-120, 130, 45);
+    _maxMarkLabelRect= CGRectMake(0, 200, WIDTH, 20);
+    _startBtnRect= CGRectMake((WIDTH-124)/2, HEIGHT-120, 124, 39);
 }
 
 -(void)loadUI{
     [self addSubview:self.backgroundImageView];
+    [self addSubview:self.maxMarkLabel];
     [self addSubview:self.logoImageView];
     [self addSubview:self.startBtn];
 }
@@ -55,6 +59,14 @@
     return _backgroundImageView;
 }
 
+-(UILabel *)maxMarkLabel{
+    if (!_maxMarkLabel) {
+        _maxMarkLabel=[[UILabel alloc]initWithFrame:_maxMarkLabelRect];
+        [_maxMarkLabel quicklySetFontPoint:20 textColorHex:@"ffffff" textAlignment:NSTextAlignmentCenter];
+    }
+    return _maxMarkLabel;
+}
+
 -(UIImageView *)logoImageView{
     if (!_logoImageView) {
         _logoImageView=[[UIImageView alloc]initWithFrame:_logoImageViewRect];
@@ -67,11 +79,12 @@
     if (!_startBtn) {
         _startBtn=[UIButton buttonWithType:UIButtonTypeCustom];
         _startBtn.frame=_startBtnRect;
-        _startBtn.backgroundColorHex=@"6CCA5C";
-        [_startBtn quicklySetFontPoint:28 textColorHex:@"652709" textAlignment:NSTextAlignmentCenter title:@"PLAY"];
-        _startBtn.layer.borderColor=[[UIColor colorWithHex:@"652709"]CGColor];
-        _startBtn.layer.cornerRadius=5;
-        _startBtn.layer.borderWidth=4;
+        [_startBtn quicklySetNormalBackgroundImageNamed:@"startBtn_c.png" highlightBackgroundImageNamed:nil selectedBackgroundImageNamed:nil];
+//        _startBtn.backgroundColorHex=@"6CCA5C";
+//        [_startBtn quicklySetFontPoint:28 textColorHex:@"652709" textAlignment:NSTextAlignmentCenter title:@"PLAY"];
+//        _startBtn.layer.borderColor=[[UIColor colorWithHex:@"652709"]CGColor];
+//        _startBtn.layer.cornerRadius=5;
+//        _startBtn.layer.borderWidth=4;
     }
     return _startBtn;
 }

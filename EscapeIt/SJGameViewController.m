@@ -46,7 +46,8 @@
     tap.delegate=self;
     [self.mainView addGestureRecognizer:tap];
     
-    [self.mainView.retryBtn addTarget:self action:@selector(retry) forControlEvents:UIControlEventTouchUpInside];
+    [self.mainView.resultView.retryBtn addTarget:self action:@selector(retry) forControlEvents:UIControlEventTouchUpInside];
+    [self.mainView.resultView.exitBtn addTarget:self action:@selector(exit) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -94,6 +95,18 @@
     [self initTimer];
     
     [self.mainView reloadUI];
+    
+    POPSpringAnimation *shockAnimate=[POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
+    shockAnimate.fromValue=[NSValue valueWithCGPoint:CGPointMake(WIDTH/2, HEIGHT/2)];
+    shockAnimate.toValue=[NSValue valueWithCGPoint:CGPointMake(WIDTH/2, -HEIGHT/2)];
+    shockAnimate.springSpeed=20;
+    shockAnimate.springBounciness=12;
+    
+    [self.mainView.resultView.backgroundView pop_addAnimation:shockAnimate forKey:@"shock"];
+}
+
+-(void)exit{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)gameOver{
@@ -109,19 +122,20 @@
     
 
     POPSpringAnimation *shockAnimate=[POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
+    shockAnimate.fromValue=[NSValue valueWithCGPoint:CGPointMake(WIDTH/2, -HEIGHT/2)];
     shockAnimate.toValue=[NSValue valueWithCGPoint:CGPointMake(WIDTH/2, HEIGHT/2)];
     shockAnimate.springSpeed=20;
     shockAnimate.springBounciness=12;
     
-    [self.mainView.markLabel pop_addAnimation:shockAnimate forKey:@"shock"];
+    [self.mainView.resultView.backgroundView pop_addAnimation:shockAnimate forKey:@"shock"];
     
     [UIView animateWithDuration:0.6 animations:^{
-    
+        self.mainView.resultView.alpha=1;
         [self.mainView.leftPeopleImageView quicklySetOriginX:WIDTH/2-CGRectGetWidth(self.mainView.leftPeopleImageView.frame)];
         [self.mainView.rightPeopleImageView quicklySetOriginX:WIDTH/2];
     }];
     
-    self.mainView.retryBtn.hidden=NO;
+    [self.mainView.resultView showWithMark:self.mark maxMark:[SJMarkManager getMark]];
 }
 
 -(void)update{
@@ -134,8 +148,8 @@
 //    }else{
 //        scale-=0.0005;
 //    }
-//    
-//    self.mainView.backgroundImageView.transform=CGAffineTransformMakeScale(scale, scale);
+    
+    self.mainView.backgroundImageView.transform=CGAffineTransformMakeRotation(i/4800.);
     
     if (i%10==0) {
         if ((arc4random()%100)<(self.createThingsP*100)) {
@@ -237,7 +251,7 @@
     v.image=[UIImage imageNamed:@"bomb.png"];
     v.tag=objectTag;
     
-    [self.mainView.backgroundImageView addSubview:v];
+    [self.mainView.backgroundView addSubview:v];
     [self.things addObject:v];
     
     objectTag++;

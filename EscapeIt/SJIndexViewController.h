@@ -10,7 +10,5 @@
 #import "SJBaseViewController.h"
 
 @interface SJIndexViewController : SJBaseViewController
-
-
 @end
 

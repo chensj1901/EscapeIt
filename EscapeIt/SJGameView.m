@@ -12,6 +12,7 @@
 @implementation SJGameView
 
 {
+    CGRect _backgroundViewRect;
     CGRect _backgroundImageViewRect;
     CGRect _markLabelRect;
     CGRect _leftPeopleImageViewRect;
@@ -21,6 +22,7 @@
     CGRect _heatTwoImageViewRect;
     CGRect _heatThreeImageViewRect;
     CGRect _retryBtnRect;
+    CGRect _resultViewRect;
 }
 
 
@@ -34,6 +36,8 @@
 @synthesize heatThreeImageView=_heatThreeImageView;
 @synthesize retryBtn=_retryBtn;
 @synthesize adMogobarView=_adMogobarView;
+@synthesize backgroundView=_backgroundView;
+@synthesize resultView=_resultView;
 
 
 
@@ -50,7 +54,8 @@
 
 -(void)loadSetting{
     CGFloat k=2.5;
-    _backgroundImageViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
+    _backgroundViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
+    _backgroundImageViewRect= CGRectMake(-HEIGHT, -HEIGHT, 2*HEIGHT, 2*HEIGHT);
     _leftPeopleImageViewRect= CGRectMake(WIDTH/2-107/k, HEIGHT-197/k-50, 107/k, 197/k);
     _rightPeopleImageViewRect= CGRectMake(WIDTH/2, HEIGHT-188/k-50, 101/k, 188/k);
     _markLabelRect= CGRectMake(0, 20, WIDTH/2, 28);
@@ -58,11 +63,13 @@
     _heatOneImageViewRect= CGRectMake(WIDTH-150, 20, 38, 29);
     _heatTwoImageViewRect= CGRectMake(WIDTH-100, 20, 38, 29);
     _heatThreeImageViewRect= CGRectMake(WIDTH-50, 20, 38, 29);
+    _resultViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
     _retryBtnRect=  CGRectMake((WIDTH-130)/2, HEIGHT-160, 130, 45);
 }
 
 -(void)loadUI{
     [self addSubview:self.backgroundImageView];
+    [self addSubview:self.backgroundView];
     [self addSubview:self.heatOneImageView];
     [self addSubview:self.heatTwoImageView];
     [self addSubview:self.heatThreeImageView];
@@ -72,9 +79,18 @@
     [self addSubview:self.cloudImageView];
     [self addSubview:self.retryBtn];
     [self addSubview:self.adMogobarView];
+    [self addSubview:self.resultView];
 }
 
 #pragma mark - 属性定义
+
+-(UIView *)backgroundView{
+    if (!_backgroundView) {
+        _backgroundView=[[UIView alloc]initWithFrame:_backgroundViewRect];
+    }
+    return _backgroundView;
+}
+
 
 -(UIImageView *)backgroundImageView{
     if (!_backgroundImageView) {
@@ -168,8 +184,19 @@
     return _adMogobarView;
 }
 
+-(SJResultView *)resultView{
+    if (!_resultView) {
+        _resultView=[[SJResultView alloc]initWithFrame:_resultViewRect];
+        _resultView.alpha=0;
+    }
+    return _resultView;
+}
+
+
 -(void)reloadUI{
-    self.retryBtn.hidden=YES;
+    [UIView animateWithDuration:0.6 animations:^{
+        self.resultView.alpha=0;
+    }];
     self.markLabel.frame=_markLabelRect;
 }
 

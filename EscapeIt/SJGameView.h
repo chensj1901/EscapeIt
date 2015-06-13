@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "UIEffectDesignerView.h"
 #import "AdMoGoView.h"
+#import "SJResultView.h"
 
 @interface SJGameView : UIView
+@property(nonatomic,readonly)UIView *backgroundView;
 @property(nonatomic,readonly)UIImageView *backgroundImageView;
 @property(nonatomic,readonly)UILabel *markLabel;
 @property(nonatomic,readonly)UIImageView *leftPeopleImageView;
@@ -21,6 +23,6 @@
 @property(nonatomic,readonly)UIButton *retryBtn;
 @property(nonatomic,readonly)UIImageView *cloudImageView;
 @property(nonatomic,readonly)AdMoGoView *adMogobarView;
-
+@property(nonatomic,readonly)SJResultView *resultView;
 -(void)reloadUI;
 @end
