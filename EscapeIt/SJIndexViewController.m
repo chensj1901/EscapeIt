@@ -58,7 +58,7 @@
     [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self initTimer];
-    self.mainView.maxMarkLabel.text=[NSString stringWithFormat:@"最高分：%d",[SJMarkManager getMark]];
+    self.mainView.maxMarkLabel.text=[NSString stringWithFormat:NSLocalizedString(@"Max: %d", nil),[SJMarkManager getMark]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{

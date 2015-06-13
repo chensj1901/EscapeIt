@@ -33,8 +33,8 @@
 
 @implementation SJGameViewController
 -(void)loadSetting{
-    self.peopleV=2.5;
-    self.thingV=3;
+    self.peopleV=2.5*WIDTH/320.;
+    self.thingV=3*WIDTH/320.;
     self.createThingsP=1./8;
     self.life=3;
     self.mark=0;
@@ -247,7 +247,7 @@
 -(void)createOneThing{
     static NSInteger objectTag=1;
     
-    UIImageView *v=[[UIImageView alloc]initWithFrame:CGRectMake(arc4random()%(int)(WIDTH-20), -20, 20, 20)];
+    UIImageView *v=[[UIImageView alloc]initWithFrame:CGRectMake(arc4random()%(int)(WIDTH-20*WIDTH/320.), -20*WIDTH/320., 20*WIDTH/320., 20*WIDTH/320.)];
     v.image=[UIImage imageNamed:@"bomb.png"];
     v.tag=objectTag;
     

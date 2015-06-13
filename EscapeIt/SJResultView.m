@@ -96,7 +96,7 @@
     if (!_retryBtn) {
         _retryBtn=[UIButton buttonWithType:UIButtonTypeCustom];
         _retryBtn.frame=_retryBtnRect;
-        [_retryBtn quicklySetFontPoint:18 textColorHex:@"313746" textAlignment:NSTextAlignmentCenter title:@"再来一局"];
+        [_retryBtn quicklySetFontPoint:18 textColorHex:@"313746" textAlignment:NSTextAlignmentCenter title:NSLocalizedString(@"Retry", nil)];
     }
     return _retryBtn;
 }
@@ -105,7 +105,7 @@
     if (!_exitBtn) {
         _exitBtn=[UIButton buttonWithType:UIButtonTypeCustom];
         _exitBtn.frame=_exitBtnRect;
-        [_exitBtn quicklySetFontPoint:14 textColorHex:@"313746" textAlignment:NSTextAlignmentCenter title:@"返回"];
+        [_exitBtn quicklySetFontPoint:14 textColorHex:@"313746" textAlignment:NSTextAlignmentCenter title:NSLocalizedString(@"Back", nil)];
     }
     return _exitBtn;
 }
@@ -115,12 +115,12 @@
 #pragma mark - 其他方法
 -(void)showWithMark:(NSInteger)mark maxMark:(NSInteger)maxMark{
     if(mark>=maxMark){
-        self.totalLabel.text=@"新纪录!!";
+        self.totalLabel.text=NSLocalizedString(@"New record!!!!!", nil);
     }else{
-        self.totalLabel.text=@"游戏结束";
+        self.totalLabel.text=NSLocalizedString(@"Game over", nil);
     }
-    self.thisMarkLabel.text=[NSString stringWithFormat:@"本局得分：%d",mark];
-    self.maxMarkLabel.text=[NSString stringWithFormat:@"历史最高分：%d",maxMark];
+    self.thisMarkLabel.text=[NSString stringWithFormat:NSLocalizedString(@"Score: %d", nil),mark];
+    self.maxMarkLabel.text=[NSString stringWithFormat:NSLocalizedString(@"Max: %d", nil),maxMark];
     
     self.hidden=NO;
 }

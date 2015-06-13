@@ -53,7 +53,8 @@
 }
 
 -(void)loadSetting{
-    CGFloat k=2.5;
+    CGFloat wk=WIDTH/320.;
+    CGFloat k=3/wk;
     _backgroundViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
     _backgroundImageViewRect= CGRectMake(-HEIGHT, -HEIGHT, 2*HEIGHT, 2*HEIGHT);
     _leftPeopleImageViewRect= CGRectMake(WIDTH/2-107/k, HEIGHT-197/k-50, 107/k, 197/k);
