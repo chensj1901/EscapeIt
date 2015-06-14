@@ -190,7 +190,7 @@
         }
         
         if(CGRectGetMinY(v.frame)>HEIGHT){
-            [self showBombEffect:v];
+//            [self showBombEffect:v];
             [v removeFromSuperview];
             [self.things removeObject:v];
             i--;

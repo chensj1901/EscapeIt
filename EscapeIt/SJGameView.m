@@ -56,11 +56,11 @@
     CGFloat wk=WIDTH/320.;
     CGFloat k=3/wk;
     _backgroundViewRect= CGRectMake(0, 0, WIDTH, HEIGHT);
-    _backgroundImageViewRect= CGRectMake(-HEIGHT, -HEIGHT, 2*HEIGHT, 2*HEIGHT);
+    _backgroundImageViewRect= CGRectMake(-HEIGHT/2, -HEIGHT/2, 2*HEIGHT, 2*HEIGHT);
     _leftPeopleImageViewRect= CGRectMake(WIDTH/2-107/k, HEIGHT-197/k-50, 107/k, 197/k);
     _rightPeopleImageViewRect= CGRectMake(WIDTH/2, HEIGHT-188/k-50, 101/k, 188/k);
     _markLabelRect= CGRectMake(0, 20, WIDTH/2, 28);
-    _cloudImageViewRect= CGRectMake(0, HEIGHT-130, WIDTH, 130);
+    _cloudImageViewRect= CGRectMake(0, HEIGHT-100, WIDTH, 100);
     _heatOneImageViewRect= CGRectMake(WIDTH-150, 20, 38, 29);
     _heatTwoImageViewRect= CGRectMake(WIDTH-100, 20, 38, 29);
     _heatThreeImageViewRect= CGRectMake(WIDTH-50, 20, 38, 29);

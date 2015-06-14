@@ -34,7 +34,7 @@
 }
 
 -(void)loadSetting{
-    _backgroundImageViewRect= CGRectMake(-HEIGHT, -HEIGHT, 2*HEIGHT, 2*HEIGHT);
+    _backgroundImageViewRect= CGRectMake(-HEIGHT/2, -HEIGHT/2, 2*HEIGHT, 2*HEIGHT);
     _logoImageViewRect= CGRectMake((WIDTH-483/2)/2, 100, 483/2, 123/2);
     _maxMarkLabelRect= CGRectMake(0, 200, WIDTH, 20);
     _startBtnRect= CGRectMake((WIDTH-124)/2, HEIGHT-120, 124, 39);
