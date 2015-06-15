@@ -180,7 +180,7 @@
 
 -(UIView *)adMogobarView{
     if (!_adMogobarView) {
-        _adMogobarView=[[AdMoGoView alloc]initWithAppKey:ADS_APPKEY adType:AdViewTypeNormalBanner adMoGoViewDelegate:nil adViewPointType:AdMoGoViewPointTypeDown_middle];
+//        _adMogobarView=[[AdMoGoView alloc]initWithAppKey:ADS_APPKEY adType:AdViewTypeNormalBanner adMoGoViewDelegate:nil adViewPointType:AdMoGoViewPointTypeDown_middle];
     }
     return _adMogobarView;
 }

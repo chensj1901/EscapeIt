@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "SJIndexViewController.h"
 #import <SJSettingRecode.h>
-
+#import <MobClick.h>
 @interface AppDelegate ()
 
 @end
@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [SJSettingRecode initDB];
+    [MobClick startWithAppkey:@"557ec10c67e58e40d0002ca9"];
+    
     
     SJIndexViewController *indexVC=[[SJIndexViewController alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:indexVC];
