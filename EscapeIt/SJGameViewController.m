@@ -305,6 +305,7 @@
  */
 - (void)adMoGoDidReceiveAd:(AdMoGoView *)adMoGoView{
     NSLog(@"%@",NSStringFromCGRect(adMoGoView.frame));
+    [adMoGoView quicklySetOriginY:HEIGHT-50];
     NSLog(@"广告接收成功回调");
 }
 /**
