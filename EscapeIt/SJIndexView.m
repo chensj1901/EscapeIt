@@ -70,7 +70,7 @@
 -(UIImageView *)logoImageView{
     if (!_logoImageView) {
         _logoImageView=[[UIImageView alloc]initWithFrame:_logoImageViewRect];
-        _logoImageView.image=[UIImage imageNamed:@"logo_c.png"];
+        _logoImageView.image=[UIImage imageNamed:NSLocalizedString(@"logo_e.png", nil)];
     }
     return _logoImageView;
 }
@@ -79,7 +79,7 @@
     if (!_startBtn) {
         _startBtn=[UIButton buttonWithType:UIButtonTypeCustom];
         _startBtn.frame=_startBtnRect;
-        [_startBtn quicklySetNormalBackgroundImageNamed:@"startBtn_c.png" highlightBackgroundImageNamed:nil selectedBackgroundImageNamed:nil];
+        [_startBtn quicklySetNormalBackgroundImageNamed:NSLocalizedString(@"startBtn_e.png", nil) highlightBackgroundImageNamed:nil selectedBackgroundImageNamed:nil];
 //        _startBtn.backgroundColorHex=@"6CCA5C";
 //        [_startBtn quicklySetFontPoint:28 textColorHex:@"652709" textAlignment:NSTextAlignmentCenter title:@"PLAY"];
 //        _startBtn.layer.borderColor=[[UIColor colorWithHex:@"652709"]CGColor];

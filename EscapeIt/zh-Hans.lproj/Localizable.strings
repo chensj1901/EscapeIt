@@ -5,3 +5,5 @@
 "Game over"="游戏结束";
 "Score: %d"="本局得分：%d";
 "Max: %d"="历史最高分：%d";
+"logo_e.png"="logo_c.png";
+"startBtn_e.png"="startBtn_c.png";
