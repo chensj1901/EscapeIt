@@ -894,6 +894,7 @@
 			baseConfigurationReference = E9447FE0D33A025AEF7B86A3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/EscapeIt/PrefixHeader.pch";
 				INFOPLIST_FILE = EscapeIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -913,6 +914,7 @@
 			baseConfigurationReference = 1EEB202F10DE1C8B41744BE7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/EscapeIt/PrefixHeader.pch";
 				INFOPLIST_FILE = EscapeIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
